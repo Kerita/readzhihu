@@ -1,0 +1,229 @@
+body{
+	font-family: Arial, sans-serif;
+	font-size:18px;
+	margin: 0 ;
+	padding: 0;
+
+}
+
+#container{
+
+	padding:0;
+	margin: 0 auto;
+	width: 800px;
+
+}
+
+
+#nav{
+	background-color: white;
+	position: fixed;
+	top:0;
+	padding-top: 20px;
+	padding-left: 30px;
+	width: 800px;
+
+}
+
+#date {
+	height:40px;
+	line-height: 100%;
+	margin:0;
+	padding: 0;
+
+}
+
+#date span{
+	vertical-align:middle;
+}
+
+#date h2{
+	padding-right: 15px;
+	margin-right: 25px;
+}
+
+#date input{
+	height: 28px;
+	font-size: 20px;
+	display: inline-block;
+	width: 202px;
+	padding-left: 5px;
+
+}
+
+
+
+/* yerterday recent archive选项卡 */
+#tab{
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+
+
+
+#tab a{
+	font-size: 32px;
+	line-height: 24px;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color:#044e97;
+	padding: 10px 0px;
+	width: 150px;
+	border-bottom:1px solid #ccc;
+	text-align: center;
+
+}
+
+#tab #yesterday
+{
+	display: block;
+}
+
+#tab .choose{
+
+	cursor:default;
+	color:black;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+
+
+#view{
+	padding-top:140px;
+	margin: 0 auto;
+	width: 90%;
+	overflow: hidden;
+}
+
+
+#view li{
+	margin:15px 0;
+}
+
+#view a{
+	text-decoration: none;
+	color:#044e97;
+	font-weight: bold;
+}
+
+
+
+
+
+#view .agreeText{
+	color: #ccc;
+}
+
+
+
+#view .answerDetail{
+	margin: 5px;
+}
+
+/*回到顶部*/
+.backToTop {
+	display: none;
+	width: 24px;
+	font-size: 22px;
+	line-height: 1.2;
+	padding: 5px 0;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	_position: absolute;
+	right: 20px;
+	bottom: 10%;
+	_bottom: "auto";
+	cursor: pointer;
+	opacity: .6;
+	filter: Alpha(opacity=60);
+	border-radius: 5px;
+}
+
+@media all and (max-width: 800px) {
+
+	#container,#nav{
+		max-width: 800px;
+		width: 100%;
+
+	}
+
+}
+
+@media all and (max-width:500px) {
+
+	#date{
+		margin-left: 5px;
+	}
+
+	#date input{
+		display: block;
+		height: 26px;
+		font-size: 16px;
+		margin-top: 5px;
+
+	}
+
+	#tab  {
+		margin-top: 38px;
+
+	}
+
+	#tab a {
+		width: 30%;
+
+	}
+
+	#view{
+
+		padding-top: 130px;
+		float: left;
+	}
+	#ol{
+		padding-left: 5px;
+	}
+
+
+}
+
+
+@media all and (max-width: 430px) {
+
+	#nav{
+
+		padding-top: 0px;
+	}
+
+
+	#nav h1 span{
+		font-size: 18px;
+	}
+
+	#date input{
+		/*iphone 微信input上边距无法显示*/
+		margin-top: 0;
+	}
+
+	#tab{
+		position: relative;
+		left: -14px;
+	}
+
+	#tab a{
+		width: 30%;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+
+
+
+
+
+}
+
+
+

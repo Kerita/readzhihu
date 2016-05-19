@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- 这个作用是在浏览器地址栏显示您的小图标； -->
+
+	<link rel="bookmark" href="favicon.ico">
+	<!-- 这个作用是在收藏夹里面显示您的小图标。 -->
+
+	<link rel="stylesheet" type="text/css" href="css/getpostanswers.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.cxcalendar.css">
+
+	<script type="text/javascript" src="js/laytpl.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery.cxcalendar.min.js"></script>
+	<title>看知乎--每天三次，为你更新知乎最佳回答</title>
+</head>
+<body>
+
+	<div id="container">
+		<div id="header">
+
+			<div id="nav">
+				<h1 id="date">
+					<span>更新日期:</span>
+					<input id="datepicker" type="text" placeholder="可选择日期" data-format="YYYYMMDD"/>
+				</h1>
+
+
+				<div id="tab">
+					<a href="" id="yesterday" class="choose">昨日最新</a>
+					<a href="" id="recent">近日热门</a>
+					<a href="" id="archive">历史精华</a>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 建立视图。用于呈现渲染结果。 -->
+		<div id="view"></div>
+	</div>
+
+
+	<!-- 编写模版。你可以使用一个script标签存放模板，如： -->
+	<script id="demo" type="text/html">
+
+		<ol>
+			{{# for(var i = 0, len = d.answers.length; i < len; i++){ }}
+			<li>
+
+
+				<div class="question">
+					<a href=http://www.zhihu.com/question/{{ d.answers[i].questionid}} target="_blank"> {{ d.answers[i].title }}</a>
+				</div>
+
+
+
+
+				<div class="answerDetail">
+
+					<a href= http://www.zhihu.com/people/{{ d.answers[i].authorhash }} target="_blank">{{ d.answers[i].authorname }}</a>
+
+					<span class="agreeText">
+						({{ d.answers[i].vote }}
+						<img src="iamges/agree.png" class="agreelogo" />)
+					</span>
+
+					<div class="summary">
+						{{ d.answers[i].summary }}
+
+						<a href=http://www.zhihu.com/question/{{ d.answers[i].questionid }}/answer/{{ d.answers[i].answerid }} target="_blank">阅读全文</a>
+					</div>
+
+
+
+				</div>
+
+
+
+
+			</li>
+			{{# } }}
+		</ol>
+	</script>
+
+
+	<!-- 加载 -->
+
+	<script type="text/javascript" src="js/getpostanswers.js"></script>
+
+
+
+</body>
+</html>
